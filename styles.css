@@ -8,9 +8,33 @@
     box-sizing: border-box;
 }
 
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" attribute is exclud, because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+
+a, button {
+    cursor: revert;
+}
+
+/* Header Section */
+
+/* Set a maximum width for the header, main, and footer elements */
+
 header, main, footer{
     max-width: 1920px;
 }
+
+
+/* Set the height and background properties for the header */
 
 header{
     height: 100vh;
@@ -19,6 +43,8 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/* Style for SVG elements within the header */
 
 header svg{
     width: 50px;
