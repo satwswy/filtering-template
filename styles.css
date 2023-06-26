@@ -5,49 +5,93 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
-    - The "html" attribute is exclud, because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+    - The "html" attribute is excluded because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
  */
 
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
-    all: unset;
-    display: revert;
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+}
+
+/* Reset styles for the body and html elements */
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Reapply the pointer cursor for anchor tags */
 
-a, button {
-    cursor: revert;
+a,
+button {
+  cursor: revert;
 }
 
 /* Header Section */
 
 /* Set a maximum width for the header, main, and footer elements */
 
-header, main, footer{
-    max-width: 1920px;
+header,
+main,
+footer {
+  max-width: 1920px;
 }
 
+/* Set the height for the header */
 
-/* Set the height and background properties for the header */
-
-header{
-    height: 100vh;
-    background-image: url("https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1479&q=80");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+header {
+  position: relative;
+  height: 100vh;
+  text-align: center;
 }
 
-/* Style for SVG elements within the header */
+/* Style for the heading within the header */
+header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 8rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
 
-header svg{
-    width: 50px;
-    height: 50px;
-    fill: palevioletred;
+/* Style for the SVG within the header */
+header svg {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  fill: rgb(236, 236, 236);
+  width: 155px;
+  height: 155px;
+  z-index: 1;
+}
+
+/* Style for the image within the header */
+header img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* Style for the heading within the header */
+header h3 {
+  position: absolute;
+  top: 75px;
+  right: 30px;
+  font-size: 2rem;
+  color: rgb(236, 236, 236);
 }
