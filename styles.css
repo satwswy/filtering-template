@@ -105,3 +105,15 @@ header div {
   padding-inline: 50px;
   padding-top: 70px;
 }
+
+
+
+/* Main Section */
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 260px;
+  padding-top: 200px;
+}
