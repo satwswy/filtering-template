@@ -1,10 +1,10 @@
 /* Basic Reset Styles */
 
-/*
-    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
-    - The "symbol *" part is to solve Firefox SVG sprite bug
-    - The "html" attribute is excluded because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
- */
+/* 
+   Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+   - The "symbol *" part is to solve Firefox SVG sprite bug
+   - The "html" attribute is excluded because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+*/
 
 *:where(
     :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
@@ -20,6 +20,7 @@
   --color-blue: #18a4bd;
   --color-black: #222;
 }
+
 /* Preferred box-sizing value */
 
 *,
@@ -133,28 +134,40 @@ main {
   background-color: rgb(255, 255, 255);
   gap: 50px;
 }
-main .grid{
+
+/* Grid Layout for main section */
+
+main .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(calc(50% - 50px), 1fr));
   column-gap: 50px;
   row-gap: 100px;
 }
 
-main .card{
+/* Style for the card within the main section */
+
+main .card {
   width: 100%;
 }
 
-main .card img{
+/* Style for the image within the card */
+
+main .card img {
   display: block;
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
 }
-main .card h4{
+
+/* Style for the heading within the card */
+
+main .card h4 {
   color: var(--color-pink);
   margin-top: 55px;
   margin-bottom: 25px;
 }
+
+/* Styles for the pseudo-elements before and after the main section */
 
 main::before {
   content: "";
@@ -186,6 +199,8 @@ main::after {
   border-bottom-right-radius: 100px;
 }
 
+/* Style for the paragraphs within the main section */
+
 main > p {
   font-size: 1.5rem;
   line-height: 1.5;
@@ -193,6 +208,8 @@ main > p {
   color: var(--color-green);
   text-align: center;
 }
+
+/* Styles for the unordered list within the main section */
 
 main ul {
   display: flex;
@@ -202,6 +219,9 @@ main ul {
   gap: 60px;
   padding: 5px;
 }
+
+/* Styles for the buttons within the unordered list */
+
 main ul button {
   padding: 15px;
 }
