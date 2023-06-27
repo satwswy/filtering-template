@@ -13,6 +13,14 @@
   display: revert;
 }
 
+
+:root {
+  --color-pink: #fa97b6;
+  --color-white: #fff;
+  --color-green: #4d5d45;
+  --color-blue: #18a4bd;
+  --color-black: #222;
+}
 /* Preferred box-sizing value */
 
 *,
@@ -124,6 +132,7 @@ main {
   margin-top: -100px;
   position: relative;
   background-color: rgb(255, 255, 255);
+  gap: 50px;
 }
 
 main::before {
@@ -154,4 +163,24 @@ main::after {
   box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.3);
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
+}
+
+main > p{
+  font-size: 1.5rem;
+  line-height: 1.5;
+  width: min(820px, 100%);
+  color: var(--color-green);
+  text-align: center;
+}
+
+main ul{
+  display: flex;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  align-items: center;
+  gap: 60px;
+  padding: 5px;
+}
+main ul button{
+  padding: 15px;
 }
