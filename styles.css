@@ -1,13 +1,5 @@
 /* Basic Reset Styles */
 
-/* Preferred box-sizing value */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 /*
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
@@ -19,6 +11,14 @@
   ) {
   all: unset;
   display: revert;
+}
+
+/* Preferred box-sizing value */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* Reset styles for the body and html elements */
@@ -36,6 +36,13 @@ html {
 a,
 button {
   cursor: revert;
+}
+
+/* Reset styles for the ordered and unordered lists */
+
+ol,
+ul {
+  list-style: none;
 }
 
 /* Header Section */
@@ -106,14 +113,45 @@ header div {
   padding-top: 70px;
 }
 
-
-
 /* Main Section */
 
-main{
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-inline: 260px;
-  padding-top: 200px;
+  padding: 200px 260px;
+  border-radius: 100px;
+  margin-top: -100px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  box-shadow: 0px -20px 25px 0px rgba(0, 0, 0, 0.3);
+}
+
+main::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
