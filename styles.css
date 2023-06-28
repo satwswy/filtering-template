@@ -174,12 +174,23 @@ main .card img {
   object-fit: cover;
 }
 
-/* Style for the heading within the card */
+/* Style for the heading 4 within the card */
 main .card h4 {
   color: var(--color-pink);
   margin-top: 55px;
   margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 600;
 }
+
+/* Style for the paragraph within the card */
+
+main .card p{
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
 
 /* Styles for the pseudo-elements before and after the main section */
 main::before {
