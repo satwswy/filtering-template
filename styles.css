@@ -22,12 +22,34 @@ body {
   margin: 0;
 }
 
+p,h1,h2,h3,h4,h5,h6{
+  font-size: inherit;
+  font-weight: inherit;
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
 
 /* Reset styles for the ordered and unordered lists */
 
-ol,
 ul {
   list-style: none;
+}
+
+button{
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
 }
 
 /* Header Section */
@@ -74,15 +96,15 @@ header svg {
 header img {
   display: block;
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  filter: brightness(0.8);
   position: absolute;
 }
 
 /* Style for the heading within the header */
 
 header h3 {
-  font-size: 2rem;
+  font-size: 18px;
   color: rgb(236, 236, 236);
 }
 
@@ -104,7 +126,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 200px 260px;
   border-radius: 100px;
   margin-top: -100px;
   margin-bottom: -100px;
@@ -181,11 +202,12 @@ main::after {
 /* Style for the paragraphs within the main section */
 
 main > p {
-  font-size: 1.5rem;
+  font-size: 30px;
   line-height: 1.5;
-  width: min(820px, 100%);
+  width: min(900px, 100%);
   color: var(--color-green);
   text-align: center;
+  font-weight: 600;
 }
 
 /* Styles for the unordered list within the main section */
@@ -195,14 +217,25 @@ main ul {
   background-color: var(--color-blue);
   color: var(--color-white);
   align-items: center;
-  gap: 60px;
+  gap: 25px;
   padding: 5px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main section:nth-child(2){
+  width: min(610px, 100%);
+  background-color: burlywood;
 }
 
 /* Styles for the buttons within the unordered list */
 
 main ul button {
   padding: 15px;
+  cursor: pointer;
 }
 
 
