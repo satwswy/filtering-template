@@ -184,7 +184,6 @@ main .card h4 {
 }
 
 /* Style for the paragraph within the card */
-
 main .card p {
   font-size: 2rem;
   font-weight: 700;
@@ -272,23 +271,7 @@ footer .footer-info {
   height: 500px;
   position: relative;
 }
-footer .footer-info nav,footer .footer-info span {
-  color: white;
-}
 
-footer .footer-info div{
-  position: absolute;
-  width: 100%;
-  padding-inline: 50px;
-  bottom: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-
-footer .footer-info nav{
-  display: flex;
-  gap: 15px;
-}
 /* Style for the image within the footer-info */
 footer .footer-info img {
   width: 100%;
@@ -304,14 +287,6 @@ footer .footer-info h2 {
   transform: translate(-50%, -50%);
   color: var(--color-white);
   font-size: 8rem;
-}
-
-.marquees-wrapper {
-  overflow-x: hidden;
-}
-
-.marquees-wrapper:hover ul {
-  animation-play-state: paused;
 }
 
 /* Style for the marquee container */
@@ -344,3 +319,4 @@ footer .footer-info h2 {
 .marquee-2.scroll {
   animation: scroll 25s linear infinite reverse;
 }
+
