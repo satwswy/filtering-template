@@ -185,12 +185,11 @@ main .card h4 {
 
 /* Style for the paragraph within the card */
 
-main .card p{
+main .card p {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.4;
 }
-
 
 /* Styles for the pseudo-elements before and after the main section */
 main::before {
@@ -231,6 +230,7 @@ main > p {
   color: var(--color-green);
   text-align: center;
   font-weight: 600;
+  padding-bottom: 90px;
 }
 
 /* Styles for the unordered list within the main section */
@@ -251,6 +251,7 @@ main ul {
 
 main section:nth-child(2) {
   width: min(610px, 100%);
+  padding-bottom: 10px;
 }
 
 /* Styles for the buttons within the unordered list */
