@@ -272,7 +272,7 @@ footer .footer-info {
   height: 500px;
   position: relative;
 }
-footer .footer-info nav {
+footer .footer-info nav,footer .footer-info span {
   color: white;
 }
 /* Style for the image within the footer-info */
