@@ -6,7 +6,14 @@
   --color-blue: #18a4bd;
   --color-black: #222;
 }
-
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
 /* Preferred box-sizing value */
 
 *,
@@ -262,4 +269,37 @@ footer .footer-info h2{
   transform: translate(-50%, -50%);
   color: var(--color-white);
   font-size: 8rem;
+}
+
+
+.marquees-wrapper {
+  overflow-x: hidden;
+}
+.marquees-wrapper:hover ul {
+  animation-play-state: paused;
+}
+
+.marquee {
+  --gap: 100px;
+  margin-top: 10px;
+  display: flex;
+  gap: var(--gap);
+  background: rgb(7, 7, 7);
+  user-select: none;
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: 100px;
+}
+
+.scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.marquee-2.scroll {
+  animation: scroll 25s linear infinite reverse;
 }
