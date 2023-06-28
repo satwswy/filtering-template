@@ -1,12 +1,14 @@
-
 :root {
+  /* Color variables */
   --color-pink: #fa97b6;
   --color-white: #fff;
   --color-green: #4d5d45;
   --color-blue: #18a4bd;
   --color-black: #222;
 }
+
 @keyframes scroll {
+  /* Animation keyframes for scrolling */
   from {
     transform: translateX(0);
   }
@@ -14,48 +16,55 @@
     transform: translateX(calc(-100% - var(--gap)));
   }
 }
-/* Preferred box-sizing value */
 
+/* Preferred box-sizing value */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Reset styles for the body and html elements */
-
+/* Reset styles for the body element */
 body {
   font-family: "Roboto Serif", serif;
   margin: 0;
 }
 
-p,h1,h2,h3,h4,h5,h6{
+/* Reset styles for headings and paragraphs */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: inherit;
   overflow-wrap: break-word;
   margin: 0;
 }
 
-img{
+/* Style for images */
+img {
   display: block;
   max-width: 100%;
 }
 
-
-a{
+/* Style for anchor links */
+a {
   cursor: pointer;
   color: inherit;
   text-decoration: none;
 }
 
 /* Reset styles for the ordered and unordered lists */
-
 ul {
   list-style: none;
   margin: 0;
 }
 
-button{
+/* Style for buttons */
+button {
   border: none;
   margin: 0;
   padding: 0;
@@ -70,7 +79,6 @@ button{
 /* Header Section */
 
 /* Set a maximum width for the header, main, and footer elements */
-
 header,
 main,
 footer {
@@ -78,7 +86,6 @@ footer {
 }
 
 /* Set the height for the header */
-
 header {
   position: relative;
   height: 100vh;
@@ -86,8 +93,7 @@ header {
   display: block;
 }
 
-/* Style for the heading within the header */
-
+/* Style for the heading 1 within the header */
 header h1 {
   position: absolute;
   top: 50%;
@@ -100,14 +106,12 @@ header h1 {
 }
 
 /* Style for the SVG within the header */
-
 header svg {
   fill: rgb(236, 236, 236);
   width: 155px;
 }
 
 /* Style for the image within the header */
-
 header img {
   display: block;
   width: 100%;
@@ -116,15 +120,13 @@ header img {
   position: absolute;
 }
 
-/* Style for the heading within the header */
-
+/* Style for the heading 3 within the header */
 header h3 {
   font-size: 18px;
   color: rgb(236, 236, 236);
 }
 
 /* Style for the div within the header */
-
 header div {
   display: flex;
   align-items: center;
@@ -148,10 +150,10 @@ main {
   background-color: rgb(255, 255, 255);
   gap: 50px;
   z-index: 1;
+  padding: 260px 200px;
 }
 
 /* Grid Layout for main section */
-
 main .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(calc(50% - 50px), 1fr));
@@ -160,13 +162,11 @@ main .grid {
 }
 
 /* Style for the card within the main section */
-
 main .card {
   width: 100%;
 }
 
 /* Style for the image within the card */
-
 main .card img {
   display: block;
   width: 100%;
@@ -175,7 +175,6 @@ main .card img {
 }
 
 /* Style for the heading within the card */
-
 main .card h4 {
   color: var(--color-pink);
   margin-top: 55px;
@@ -183,7 +182,6 @@ main .card h4 {
 }
 
 /* Styles for the pseudo-elements before and after the main section */
-
 main::before {
   content: "";
   position: absolute;
@@ -215,7 +213,6 @@ main::after {
 }
 
 /* Style for the paragraphs within the main section */
-
 main > p {
   font-size: 30px;
   line-height: 1.5;
@@ -226,7 +223,6 @@ main > p {
 }
 
 /* Styles for the unordered list within the main section */
-
 main ul {
   display: flex;
   background-color: var(--color-blue);
@@ -239,38 +235,41 @@ main ul {
   font-size: 18px;
   flex-wrap: wrap;
   justify-content: center;
+  font-family: sans-serif;
 }
 
-main section:nth-child(2){
+main section:nth-child(2) {
   width: min(610px, 100%);
-  background-color: burlywood;
 }
 
 /* Styles for the buttons within the unordered list */
-
 main ul button {
   padding: 15px;
   cursor: pointer;
 }
 
+/* Footer Section */
 
-footer{
+footer {
   position: relative;
 }
 
-footer .footer-info{
+/* Style for the footer-info container within the footer */
+footer .footer-info {
   width: 100%;
   height: 500px;
   position: relative;
 }
 
+/* Style for the image within the footer-info */
 footer .footer-info img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-footer .footer-info h2{
+/* Style for the heading 2 within the footer-info */
+footer .footer-info h2 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -279,25 +278,27 @@ footer .footer-info h2{
   font-size: 8rem;
 }
 
-
 .marquees-wrapper {
   overflow-x: hidden;
 }
+
 .marquees-wrapper:hover ul {
   animation-play-state: paused;
 }
 
+/* Style for the marquee container */
 .marquee {
   --gap: 100px;
   display: flex;
   gap: var(--gap);
-  background: rgb(7, 7, 7);
+  background: var(--color-blue);
   user-select: none;
   color: var(--color-white);
   padding-block: 50px;
   font-size: 2rem;
 }
 
+/* Style for the content within the marquee */
 .marquee__content {
   flex-shrink: 0;
   display: flex;
@@ -306,10 +307,12 @@ footer .footer-info h2{
   gap: 100px;
 }
 
+/* Animation for scrolling the marquee */
 .scroll {
   animation: scroll 30s linear infinite;
 }
 
+/* Additional style for the second marquee */
 .marquee-2.scroll {
   animation: scroll 25s linear infinite reverse;
 }
