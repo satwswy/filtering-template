@@ -137,19 +137,21 @@ header .logo {
   padding-top: 70px;
 }
 
-header .scroll{
+/* Style for the scroll indicator within the header */
+
+header .scroll {
   color: var(--color-white);
   position: absolute;
   bottom: 160px;
   left: 50%;
 }
 
-header .scroll div:nth-child(2){
+header .scroll div:nth-child(2) {
   transform: translateX(-50%);
   margin-top: 15px;
 }
 
-header .scroll .vertical-line{
+header .scroll .vertical-line {
   width: 1px;
   height: 50px;
   background-color: var(--color-white);
@@ -164,6 +166,56 @@ main {
   position: relative;
   background-color: rgb(255, 255, 255);
   z-index: 1;
+}
+
+/* Styles for the pseudo-elements before and after the main section */
+main::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  box-shadow: 0px -20px 25px 0px rgba(0, 0, 0, 0.3);
+}
+
+main::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+/* Style for the content container for the main section */
+
+main > div {
+  width: min(1400px, 80%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-block: 200px;
+}
+
+/* Style for the second section for the main content */
+
+main section:nth-child(2) {
+  width: min(650px, 100%);
+  padding-bottom: 10px;
 }
 
 /* Grid Layout for main section */
@@ -203,37 +255,6 @@ main .card p {
   line-height: 1.4;
 }
 
-/* Styles for the pseudo-elements before and after the main section */
-main::before {
-  content: "";
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100px;
-  top: 0;
-  left: 0;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  box-shadow: 0px -20px 25px 0px rgba(0, 0, 0, 0.3);
-}
-
-main::after {
-  content: "";
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100px;
-  bottom: 0;
-  left: 0;
-  box-shadow: 0px 20px 25px 0px rgba(0, 0, 0, 0.3);
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-}
-
 /* Style for the paragraphs within the main section */
 main > div > p {
   font-size: 30px;
@@ -243,16 +264,6 @@ main > div > p {
   text-align: center;
   font-weight: 600;
   padding-bottom: 90px;
-}
-
-main > div {
-  width: min(1400px, 80%);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-  padding-block: 200px;
 }
 
 /* Styles for the unordered list within the main section */
@@ -271,14 +282,10 @@ main ul {
   gap: 10px;
 }
 
+/* Styles for the unordered list selected button within the main section */
 .active {
   background-color: var(--color-black);
   border-radius: 20px;
-}
-
-main section:nth-child(2) {
-  width: min(650px, 100%);
-  padding-bottom: 10px;
 }
 
 /* Styles for the buttons within the unordered list */
@@ -309,7 +316,7 @@ footer .footer-info div {
   padding-inline: 260px;
 }
 
-footer .footer-info div nav{
+footer .footer-info div nav {
   display: flex;
   gap: 15px;
 }
@@ -368,4 +375,29 @@ footer .footer-info h2 {
 /* Additional style for the second marquee */
 .marquee-2.scroll {
   animation: scroll 25s linear infinite reverse;
+}
+
+/* Large Desktops and High-Resolution Screens */
+
+@media screen and (min-width: 1280px) {
+}
+
+/* Medium Desktops and Laptops */
+
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+}
+
+/* Small Desktops and Laptops */
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+}
+
+/* Tablets responsive layout */
+
+@media screen and (max-width: 767px) and (min-width: 481px) {
+}
+
+/* Mobile phones responsive layout */
+
+@media screen and (max-width: 480px) and (min-width: 0px) {
 }
