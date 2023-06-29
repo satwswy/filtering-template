@@ -236,6 +236,23 @@
 
         </div>
     </footer>
+    <script>
+        const ulButtons = document.querySelectorAll("main ul button")
+
+        selectedCategory = () => {
+            ulButtons.forEach((btn,idx,arr) => {
+                btn.addEventListener("click",()=>{
+                    arr.forEach(btns=>{
+                        btns.classList.remove("active")
+                    })
+                    btn.classList.add("active")
+                })
+            })
+        }
+        window.onload=()=>{
+            selectedCategory()
+        }
+    </script>
 </body>
 
 </html>
