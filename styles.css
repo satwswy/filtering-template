@@ -202,7 +202,7 @@ main::after {
 /* Style for the content container for the main section */
 
 main > div {
-  width: min(1400px, 80%);
+  width: min(1400px, 90%);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -400,4 +400,80 @@ footer .footer-info h2 {
 /* Mobile phones responsive layout */
 
 @media screen and (max-width: 480px) and (min-width: 0px) {
+  header .logo {
+    flex-direction: column;
+    padding-top: 0px;
+  }
+  header h1,
+  footer .footer-info h2 {
+    font-size: 2.5rem;
+  }
+
+  main {
+    border-radius: 50px;
+  }
+  main::before {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+  main::after {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  main > div {
+    padding-block: 40px;
+    gap: 40px;
+  }
+
+  main > div > p {
+    font-size: 1.1rem;
+    padding-bottom: 0px;
+  }
+
+  main .grid {
+    grid-template-columns: 100%;
+  }
+
+  main .card h4 {
+    margin-block: 15px;
+  }
+
+  main .card p {
+    font-size: 1.2rem;
+  }
+
+  main ul {
+    gap: 0px;
+    font-size: 1rem;
+    border-radius: 0px;
+    justify-content: flex-start;
+  }
+
+  main ul button {
+    padding: 10px;
+  }
+
+  main ul li {
+    flex-basis: 50%;
+  }
+
+  footer .footer-info {
+    height: 450px;
+  }
+
+  footer .footer-info div {
+    padding-inline: 0px;
+    flex-direction: column;
+    font-size: 12px;
+    gap: 15px;
+    padding: 10px;
+  }
+  footer .footer-info div nav {
+    flex-wrap: wrap;
+  }
+
+  .marquee {
+    font-size: 1.2rem;
+    padding-block: 15px;
+  }
 }
