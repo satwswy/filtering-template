@@ -309,6 +309,11 @@ footer .footer-info div {
   padding-inline: 260px;
 }
 
+footer .footer-info div nav{
+  display: flex;
+  gap: 15px;
+}
+
 /* Style for the image within the footer-info */
 footer .footer-info img {
   width: 100%;
