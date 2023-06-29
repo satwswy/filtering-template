@@ -453,7 +453,7 @@ footer .footer-info h2 {
 
 /* Mobile phones responsive layout */
 
-@media screen and (max-width: 480px) and (min-width: 0px) {
+@media screen and (max-width: 670px) and (min-width: 0px) {
   header .logo {
     flex-direction: column;
   }
