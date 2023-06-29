@@ -240,16 +240,16 @@
         const ulButtons = document.querySelectorAll("main ul button")
 
         selectedCategory = () => {
-            ulButtons.forEach((btn,idx,arr) => {
-                btn.addEventListener("click",()=>{
-                    arr.forEach(btns=>{
+            ulButtons.forEach((btn, idx, arr) => {
+                btn.addEventListener("click", () => {
+                    arr.forEach(btns => {
                         btns.classList.remove("active")
                     })
                     btn.classList.add("active")
                 })
             })
         }
-        window.onload=()=>{
+        window.onload = () => {
             selectedCategory()
         }
     </script>
