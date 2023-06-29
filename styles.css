@@ -389,26 +389,14 @@ footer .footer-info h2 {
 
 /* Small Desktops and Laptops */
 
-@media screen and (max-width: 1023px) and (min-width: 768px) {
-}
-
-/* Tablets responsive layout */
-
-@media screen and (max-width: 767px) and (min-width: 481px) {
-}
-
-/* Mobile phones responsive layout */
-
-@media screen and (max-width: 480px) and (min-width: 0px) {
+@media screen and (max-width: 1023px) and (min-width: 0px) {
   header .logo {
-    flex-direction: column;
     padding-top: 0px;
   }
   header h1,
   footer .footer-info h2 {
-    font-size: 2.5rem;
+    font-size: 6rem;
   }
-
   main {
     border-radius: 50px;
   }
@@ -424,18 +412,58 @@ footer .footer-info h2 {
     padding-block: 40px;
     gap: 40px;
   }
-
   main > div > p {
-    font-size: 1.1rem;
     padding-bottom: 0px;
   }
-
   main .grid {
     grid-template-columns: 100%;
   }
-
   main .card h4 {
     margin-block: 15px;
+  }
+
+  main .card p {
+    font-size: 1.8rem;
+  }
+  footer .footer-info {
+    height: 450px;
+  }
+
+  footer .footer-info div {
+    padding-inline: 0px;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    align-items: center;
+  }
+  footer .footer-info div nav {
+    gap: 40px;
+  }
+
+  .marquee {
+    font-size: 1.2rem;
+    padding-block: 15px;
+  }
+}
+
+/* Tablets responsive layout */
+
+@media screen and (max-width: 767px) and (min-width: 481px) {
+}
+
+/* Mobile phones responsive layout */
+
+@media screen and (max-width: 480px) and (min-width: 0px) {
+  header .logo {
+    flex-direction: column;
+  }
+  header h1,
+  footer .footer-info h2 {
+    font-size: 2.5rem;
+  }
+
+  main > div > p {
+    font-size: 1.1rem;
   }
 
   main .card p {
@@ -457,23 +485,11 @@ footer .footer-info h2 {
     flex-basis: 50%;
   }
 
-  footer .footer-info {
-    height: 450px;
+  footer .footer-info div {
+    font-size: 12px;
   }
 
-  footer .footer-info div {
-    padding-inline: 0px;
-    flex-direction: column;
-    font-size: 12px;
-    gap: 15px;
-    padding: 10px;
-  }
   footer .footer-info div nav {
     flex-wrap: wrap;
-  }
-
-  .marquee {
-    font-size: 1.2rem;
-    padding-block: 15px;
   }
 }
