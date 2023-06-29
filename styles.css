@@ -127,7 +127,7 @@ header h3 {
 }
 
 /* Style for the div within the header */
-header div {
+header .logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,6 +135,24 @@ header div {
   z-index: 1;
   padding-inline: 50px;
   padding-top: 70px;
+}
+
+header .scroll{
+  color: var(--color-white);
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+}
+
+header .scroll div:nth-child(2){
+  transform: translateX(-50%);
+  margin-top: 15px;
+}
+
+header .scroll .vertical-line{
+  width: 1px;
+  height: 50px;
+  background-color: var(--color-white);
 }
 
 /* Main Section */
