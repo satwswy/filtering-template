@@ -108,7 +108,7 @@ header h1 {
 }
 
 /* Style for the SVG within the header */
-header svg {
+.logo svg {
   fill: rgb(236, 236, 236);
   width: 155px;
 }
@@ -129,14 +129,16 @@ header h3 {
 }
 
 /* Style for the div within the header */
-header .logo {
+.logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  z-index: 1;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
   padding-inline: 50px;
   padding-top: 70px;
+  color: var(--color-white);
 }
 
 /* Style for the scroll indicator within the header */
