@@ -77,8 +77,6 @@ button {
   line-height: normal;
 }
 
-/* Header Section */
-
 /* Set a maximum width for the header, main, and footer elements */
 header,
 main,
@@ -86,8 +84,26 @@ footer {
   max-width: 1920px;
   margin: 0 auto;
 }
+/* fixed logo Section */
 
-/* Set the height for the header */
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding-inline: 50px;
+  color: var(--color-white);
+}
+
+#logo svg {
+  fill: rgb(236, 236, 236);
+  width: 155px;
+}
+
+/* Header Section */
+/* Basic for the header */
 header {
   position: relative;
   height: 100vh;
@@ -107,12 +123,6 @@ header h1 {
   z-index: 1;
 }
 
-/* Style for the SVG within the header */
-#logo svg {
-  fill: rgb(236, 236, 236);
-  width: 155px;
-}
-
 /* Style for the image within the header */
 header img {
   display: block;
@@ -126,18 +136,6 @@ header img {
 header h3 {
   font-size: 18px;
   color: rgb(236, 236, 236);
-}
-
-/* Style for the div within the header */
-#logo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  z-index: 2;
-  padding-inline: 50px;
-  color: var(--color-white);
 }
 
 /* Style for the scroll indicator within the header */
@@ -380,12 +378,12 @@ footer .footer-info h2 {
   animation: scroll 25s linear infinite reverse;
 }
 
-.marquee-replacement{
+.marquee-replacement {
   background-color: var(--color-black);
   color: var(--color-white);
   display: none;
 }
-.marquee-replacement ul{
+.marquee-replacement ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -396,11 +394,10 @@ footer .footer-info h2 {
   font-size: 20px;
 }
 
-
 /* Large Desktops and High-Resolution Screens */
 
 @media screen and (max-width: 1599px) and (min-width: 1280px) {
-  footer .footer-info div{
+  footer .footer-info div {
     padding-inline: 50px;
   }
 }
@@ -408,10 +405,10 @@ footer .footer-info h2 {
 /* Medium Desktops and Laptops */
 
 @media screen and (max-width: 1279px) and (min-width: 0px) {
-  .marquees-wrapper{
+  .marquees-wrapper {
     display: none;
   }
-  .marquee-replacement{
+  .marquee-replacement {
     display: block;
   }
   #logo {
@@ -473,7 +470,6 @@ footer .footer-info h2 {
 /* Small Desktops and Laptops */
 
 @media screen and (max-width: 1023px) and (min-width: 0px) {
-
 }
 
 /* Tablets responsive layout */
@@ -523,8 +519,8 @@ footer .footer-info h2 {
     flex-wrap: wrap;
   }
 
-  .marquee-replacement ul li{
-    flex-basis:60%;
+  .marquee-replacement ul li {
+    flex-basis: 60%;
     text-align: center;
     border: 1px solid white;
     padding: 8px;
