@@ -519,4 +519,11 @@ footer .footer-info h2 {
   footer .footer-info div nav {
     flex-wrap: wrap;
   }
+
+  .marquee-replacement ul li{
+    flex-basis:100%;
+    text-align: center;
+    border: 1px solid white;
+    padding: 8px;
+  }
 }
