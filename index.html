@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <div class="logo">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-            y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+    <section id="logo">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
             <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
             <g>
                 <g>
@@ -39,7 +39,7 @@
             </g>
         </svg>
         <h3>#TheShoeCompany</h3>
-    </div>
+    </section>
     <header>
         <h1>Spring Collection</h1>
         <img src="https://media.gq.com/photos/5d93ae7856b77e0009b6d876/16:9/pass/shoes.jpg" alt="header image" />
@@ -307,6 +307,18 @@
         </div>
     </footer>
     <script>
+
+        window.addEventListener('scroll', function () {
+            const logo = document.getElementById('logo');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 0) {
+                logo.style.backgroundColor="rgb(59, 20, 5)";
+            } else {
+                logo.style.backgroundColor="unset";
+            }
+        }
+        )
+
         const ulButtons = document.querySelectorAll("main ul button")
 
         selectedCategory = () => {

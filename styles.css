@@ -108,7 +108,7 @@ header h1 {
 }
 
 /* Style for the SVG within the header */
-.logo svg {
+#logo svg {
   fill: rgb(236, 236, 236);
   width: 155px;
 }
@@ -129,7 +129,7 @@ header h3 {
 }
 
 /* Style for the div within the header */
-.logo {
+#logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -137,7 +137,6 @@ header h3 {
   width: 100%;
   z-index: 2;
   padding-inline: 50px;
-  padding-top: 70px;
   color: var(--color-white);
 }
 
@@ -415,7 +414,7 @@ footer .footer-info h2 {
   .marquee-replacement{
     display: block;
   }
-  header .logo {
+  #logo {
     padding-top: 0px;
   }
   header h1,
@@ -485,7 +484,7 @@ footer .footer-info h2 {
 /* Mobile phones responsive layout */
 
 @media screen and (max-width: 670px) and (min-width: 0px) {
-  header .logo {
+  #logo {
     flex-direction: column;
   }
   header h1,
