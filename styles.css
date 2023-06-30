@@ -340,6 +340,7 @@ footer .footer-info h2 {
 
 .marquees-wrapper {
   overflow: hidden;
+  display: none;
 }
 
 .marquees-wrapper:hover ul {
@@ -376,6 +377,24 @@ footer .footer-info h2 {
 .marquee-2.scroll {
   animation: scroll 25s linear infinite reverse;
 }
+
+.marquee-replacement{
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+.marquee-replacement ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 30px;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
 
 /* Large Desktops and High-Resolution Screens */
 
