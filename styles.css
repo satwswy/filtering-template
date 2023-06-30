@@ -521,7 +521,7 @@ footer .footer-info h2 {
   }
 
   .marquee-replacement ul li{
-    flex-basis:100%;
+    flex-basis:60%;
     text-align: center;
     border: 1px solid white;
     padding: 8px;
