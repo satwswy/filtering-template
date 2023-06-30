@@ -310,9 +310,9 @@
 
         window.addEventListener('scroll', function () {
             const logo = document.getElementById('logo');
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollTop = document.documentElement.scrollTop;
             if (scrollTop > 0) {
-                logo.style.backgroundColor="rgb(59, 20, 5)";
+                logo.style.backgroundColor="rgba(59, 20, 5,0.8)";
             } else {
                 logo.style.backgroundColor="unset";
             }
