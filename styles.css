@@ -340,7 +340,6 @@ footer .footer-info h2 {
 
 .marquees-wrapper {
   overflow: hidden;
-  display: none;
 }
 
 .marquees-wrapper:hover ul {
@@ -381,6 +380,7 @@ footer .footer-info h2 {
 .marquee-replacement{
   background-color: var(--color-black);
   color: var(--color-white);
+  display: none;
 }
 .marquee-replacement ul{
   display: flex;
@@ -396,17 +396,21 @@ footer .footer-info h2 {
 
 /* Large Desktops and High-Resolution Screens */
 
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 1599px) and (min-width: 1280px) {
+  footer .footer-info div{
+    padding-inline: 50px;
+  }
 }
 
 /* Medium Desktops and Laptops */
 
-@media screen and (max-width: 1279px) and (min-width: 1024px) {
-}
-
-/* Small Desktops and Laptops */
-
-@media screen and (max-width: 1023px) and (min-width: 0px) {
+@media screen and (max-width: 1279px) and (min-width: 0px) {
+  .marquees-wrapper{
+    display: none;
+  }
+  .marquee-replacement{
+    display: block;
+  }
   header .logo {
     padding-top: 0px;
   }
@@ -463,9 +467,15 @@ footer .footer-info h2 {
   }
 }
 
+/* Small Desktops and Laptops */
+
+@media screen and (max-width: 1023px) and (min-width: 0px) {
+
+}
+
 /* Tablets responsive layout */
 
-@media screen and (max-width: 767px) and (min-width: 481px) {
+@media screen and (max-width: 767px) and (min-width: 0px) {
 }
 
 /* Mobile phones responsive layout */
